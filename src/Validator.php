@@ -1698,6 +1698,8 @@ class Validator implements IValidator
     {
         $ok = true;
 
+        $data = (object) $data;
+
         // required
         if (property_exists($schema, 'required')) {
             if (!is_array($schema->required)) {
